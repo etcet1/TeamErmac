@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X1s-ao-OSE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="Lbq-7R-ym2">
+            <objects>
+                <viewController id="z0J-Ph-HNN" customClass="LoginController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Login" id="NwP-eg-mbJ">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbW-ak-pvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-166" y="51"/>
+        </scene>
+        <!--Near delivery-->
+        <scene sceneID="vHa-zh-k3m">
+            <objects>
+                <viewController id="Nl9-cy-Eq4" customClass="LocationsListController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mus-7t-UtA"/>
+                        <viewControllerLayoutGuide type="bottom" id="6xw-oI-EkH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A3V-qt-VQs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JQ5-Ma-u2z">
+                                <rect key="frame" x="46" y="28" width="518" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6xw-oI-EkH" firstAttribute="top" secondItem="JQ5-Ma-u2z" secondAttribute="bottom" constant="8" symbolic="YES" id="Kjr-b2-uzm"/>
+                            <constraint firstItem="JQ5-Ma-u2z" firstAttribute="top" secondItem="mus-7t-UtA" secondAttribute="bottom" constant="8" symbolic="YES" id="Sbv-Ti-tDR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JQ5-Ma-u2z" secondAttribute="trailing" constant="20" id="fYd-pC-Xge"/>
+                            <constraint firstItem="JQ5-Ma-u2z" firstAttribute="leading" secondItem="A3V-qt-VQs" secondAttribute="leadingMargin" constant="30" id="zy6-uH-hkD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Near delivery" id="fvI-e1-DDV">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeE-ch-HBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607" y="-532"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IcD-Av-sCx">
+            <objects>
+                <tabBarController id="X1s-ao-OSE" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Qnw-H4-JSx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nl9-cy-Eq4" kind="relationship" relationship="viewControllers" id="sjV-y4-hFu"/>
+                        <segue destination="z0J-Ph-HNN" kind="relationship" relationship="viewControllers" id="IAB-WV-3jV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4r-1L-9Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-913" y="-205"/>
+        </scene>
+    </scenes>
+</document>
